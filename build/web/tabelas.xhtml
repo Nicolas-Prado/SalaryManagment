@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Tabela de valores</title>
+    </h:head>
+    <link rel="stylesheet" href="primeflex.css" />
+    <h:body>
+        <p:growl id="growl" showDetail="true" sticky="true" />
+        <h:form>
+            <p:fieldset style="margin-bottom:20px; font-size: small;">
+                <div class="p-grid">
+                    <div class="p-col-12" style="border:1px;"> <center> <p:outputLabel value="INSS"/> </center> </div>
+
+                    <div class="p-col-9" style="border: 1px solid"> <center> <p:outputLabel style=" box-shadow: activeborder; background-color:transparent; text-align: center" value="Salario de contribuição"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0"> <center> <p:outputLabel style=" box-shadow: activeborder; background-color:transparent; text-align: center" value="Alíquota"/> </center> </div>
+
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="0"/> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até" /> </center> </div>
+                    <div class="p-col-4" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTinss1" value="#{telaSalariosBean.tabela.tinss1}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itAinss1" value="#{telaSalariosBean.tabela.ainss1}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tinss1+0.01}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-4" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTinss2" value="#{telaSalariosBean.tabela.tinss2}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText><br/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itAinss2" value="#{telaSalariosBean.tabela.ainss2}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tinss2+0.01}">
+                            <f:convertNumber maxFractionDigits="2"/>
+                        </p:outputLabel> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-4" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTinss3" value="#{telaSalariosBean.tabela.tinss3}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText><br/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itAinss3" value="#{telaSalariosBean.tabela.ainss3}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tinss3+0.01}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-4" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTinss4" value="#{telaSalariosBean.tabela.tinss4}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText><br/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itAinss4" value="#{telaSalariosBean.tabela.ainss4}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                </div>
+            </p:fieldset>
+            <p:fieldset style="margin-bottom:20px; font-size: small;"> 
+                <div class="p-grid">
+                    <div class="p-col-12" style="border:1px;"> <center> <p:outputLabel value="Salario familia"/> </center> </div>
+
+                    <div class="p-col-9" style="border: 1px solid"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Salario"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Valor por dependente"/> </center> </div>
+
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="0"/> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-4" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTsf" value="#{telaSalariosBean.tabela.tsf}">
+                            <f:convertNumber maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itVsf" value="#{telaSalariosBean.tabela.vsf}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                </div>
+            </p:fieldset>
+            <p:fieldset style="margin-bottom:20px; font-size: small;">
+                <div class="p-grid">
+                    <div class="p-col-12" style="border:1px;"> <center> <p:outputLabel value="Tabela do IRRF"/> </center> </div>
+
+                    <div class="p-col-7" style="border: 1px solid"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Base de cálculo"/> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Alíquota"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Dedução"/> </center> </div>
+
+                    <div class="p-col-3" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="0"/> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTirrf1" value="#{telaSalariosBean.tabela.tirrf1}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center; width: 95%" id="itAirrf1" value="-"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDirrf1" value="-"/> </center> </div>
+                    
+                    <div class="p-col-3" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tirrf1+0.01}"/> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTirrf2" value="#{telaSalariosBean.tabela.tirrf2}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center; width: 95%" id="itAirrf2" value="#{telaSalariosBean.tabela.airrf2}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDirrf2" value="#{telaSalariosBean.tabela.dirrf2}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                    <div class="p-col-3" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tirrf2+0.01}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTirrf3" value="#{telaSalariosBean.tabela.tirrf3}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center; width: 95%" id="itAirrf3" value="#{telaSalariosBean.tabela.airrf3}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDirrf3" value="#{telaSalariosBean.tabela.dirrf3}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                    <div class="p-col-3" style="border: 1px solid; border-top: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="#{telaSalariosBean.tabela.tirrf3+0.01}"/> </center> </div>
+                    <div class="p-col-1" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style=" margin: 1px; box-shadow:none; background-color:transparent; text-align: center" value="Até"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itTirrf4" value="#{telaSalariosBean.tabela.tirrf4}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center; width: 95%" id="itAirrf4" value="#{telaSalariosBean.tabela.airrf4}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDirrf4" value="#{telaSalariosBean.tabela.dirrf4}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                    <div class="p-col-4" style="border: 1px solid; border-top: 0; border-right: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Acima de:"/> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:outputLabel style="text-align: center" id="itTirrf5" value="#{telaSalariosBean.tabela.tirrf4+0}"/> </center> </div>
+                    <div class="p-col-2" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center; width: 95%" id="itAirrf5" value="#{telaSalariosBean.tabela.airrf5}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDirrf5" value="#{telaSalariosBean.tabela.dirrf5}">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                    <div class="p-col-6" style="border: 1px solid; border-top: 0; border-right: 0"> <center> <p:outputLabel style=" border: 1px; box-shadow: activeborder; background-color:transparent; text-align: center" value="Dedução por dependente:"/> </center> </div>
+                    <div class="p-col-6" style="border: 1px solid; border-left:0; border-top: 0"> <center> <p:inputText style="border-right:0; border-left:0; border-top:0; box-shadow:none; background-color:transparent; text-align: center" id="itDedpdep" value="#{telaSalariosBean.tabela.dedpdep}">
+                            <f:convertNumber maxFractionDigits="2"/>
+                        </p:inputText> </center> </div>
+                    
+                </div>
+            </p:fieldset>
+            
+            <p:fieldset style="margin-bottom:20px; font-size: small;">
+                <div class="p-grid">
+                    <div class="p-col-12" style="border:1px;"> <center> <p:outputLabel value="Opções"/> </center> </div>
+                    <div class="p-col-6" style="border: 1px solid;"> <center> <p:commandButton value="Voltar" ajax="false" action="index" styleClass="ui-button-raised" /> </center> </div>
+                    <div class="p-col-6" style="border: 1px solid; border-left:0;"> <center> <p:commandButton value="Salvar" ajax="false" action="#{telaSalariosBean.salvatab()}" styleClass="ui-button-raised ui-button-success"/> </center> </div>
+                </div>
+                
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html> 

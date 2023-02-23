@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Tabela de valores</title>
+    </h:head>
+    <link rel="stylesheet" href="primeflex.css" />
+    <h:body>
+        <p:growl id="growl" showDetail="true" sticky="true" />
+        <h:form>
+                <div class="p-grid">
+                    <div class="p-col-10" style="border-top:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-10" style="text-align: right"> <p:outputLabel value="Recibo de pagamento de salario" style=""/> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-5" style="text-align: left"> <p:outputLabel value="Empresa: {nome.empresa}" style=""/> </div>
+                    <div class="p-col-5" style="text-align: right"> <p:outputLabel value="#{telaSalariosBean.dataa}" style="">
+                            <f:convertDateTime pattern="MM/yyyy"/>
+                        </p:outputLabel>
+                    </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-10" style="border-bottom:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-10" style="border-top:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-2" style=""> <p:outputLabel value="Codigo" style=""/> </div>
+                    <div class="p-col-4" style=""> <p:outputLabel value="Nome funcionario" style=""/> </div>
+                    <div class="p-col-4" style=""> <center> <p:outputLabel value="Funçao" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-2" style=""> <p:outputLabel value="#{telaSalariosBean.calculaf.funcionario.matricula}" style=""/> </div>
+                    <div class="p-col-4" style=""> <p:outputLabel value="#{telaSalariosBean.calculaf.funcionario.nome}" style=""/> </div>
+                    <div class="p-col-4" style=""> <center> <p:outputLabel value="{funcao}" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-10" style="border-bottom:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-2" style="border-left:1px solid;"> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+
+                    <div class="p-col-5" style="border-top:1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-top:1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-top:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid; border-top:0px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px solid; border-top:0px solid;"> <p:outputLabel value="Descrição" style=""/> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left: 0px; border-top:0px solid; text-align: right"> <p:outputLabel value="Proventos" style=""/> </div>
+                    <div class="p-col-3" style="border: 1px solid; border-left: 0px; border-right:0px solid; border-top:0px solid; text-align: right"> <p:outputLabel value="Descontos" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid; border-top:0px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style=""> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid; border-top:0px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="Salario base" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="#{telaSalariosBean.calculaf.funcionario.salario}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel>
+                    </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="INSS" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="#{telaSalariosBean.calculaf.inss}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="Salario familia" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="#{telaSalariosBean.calculaf.sf}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="IRRF" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="#{telaSalariosBean.calculaf.irrf}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="Vale transporte" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="#{telaSalariosBean.calculaf.vt}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border-top:1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-top:1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-top:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid; border-top:0px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border: 1px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="Salario liquido" style=""/> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px; border-right: 1px solid;"> <p:outputLabel value="#{telaSalariosBean.calculaf.salliq}" style="">
+                            <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                        </p:outputLabel> </div>
+                    <div class="p-col-3" style="text-align: right; border: 1px; border-left: 0px; border-top: 0px; border-left: 0px;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid;"> <p:outputLabel value="" style=""/> </div>
+
+                    <div class="p-col-5" style="border-bottom: 1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-bottom: 1px solid; border-right:1px solid;"> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-3" style="border-bottom: 1px solid; "> <p:outputLabel value="" style=""/> </div>
+                    <div class="p-col-1" style="border-left:1px solid; border-top:0px solid;"> <p:outputLabel value="" style=""/> </div>
+                    
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    <div class="p-col-12" style=""> <center> <p:outputLabel value="" style=""/> </center> </div>
+                    
+                </div>
+            
+            <p:fieldset style="margin-bottom:20px; font-size: medium; border-color: black;">
+                <div class="p-grid">
+                    <div class="p-col-12" style="border:1px; border-color: black;"> <center> <p:outputLabel value="Opções"/> </center> </div>
+                    <div class="p-col-12" style="border: 1px solid; border-color: black;"> <center> <p:commandButton value="Voltar" ajax="false" action="index" styleClass="ui-button-raised" /> </center> </div>
+                </div>
+                
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html> 

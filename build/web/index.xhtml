@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registro de funcionarios</title>
+    </h:head>
+    <h:body>
+        <p:growl id="growl" showDetail="true" sticky="true" />
+        <div class="card">
+            <h:form>
+                <p:growl id="messages"/>
+
+                <p:menubar>
+                    <p:submenu label="Empresa" icon="pi pi-fw pi-file">
+                        <p:submenu label="Funcionarios" icon="pi pi-fw pi-plus">
+                            <p:menuitem value="Novo Funcionario" icon="pi pi-fw pi-bookmark" ajax="false" action="#{telaSalariosBean.togo()}"/>
+                            <p:menuitem value="Funcionarios" icon="pi pi-fw pi-trash" ajax="false" action="#{telaSalariosBean.togo3()}"/>
+                        </p:submenu>
+                        <p:menuitem value="Editar INSS e afins" icon="pi pi-fw pi-video" ajax="false" action="#{telaSalariosBean.togo2()}"/>
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+        </div>
+    </h:body>
+</html> 

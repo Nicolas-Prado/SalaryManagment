@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registro de funcionarios</title>
+    </h:head>
+    <h:body>
+        <p:growl id="growl" showDetail="true" sticky="true" />
+        <p:fieldset legend="Registro do funcionarios" style="margin-bottom:20px; font-size: small;">
+            <h:form>
+                <p:outputLabel value="Nome:" for="itNome"/>
+                <p:inputText id="itNome" requiredMessage="Este campo deve ser preenchido" value="#{telaSalariosBean.funcionario.nome}" /><br/><br/>
+                <p:outputLabel value="Vale transporte:" for="itVt" />
+                <p:selectOneRadio requiredMessage="Este campo deve ser preenchido" id="itVt" value="#{telaSalariosBean.funcionario.vt}">
+                    <f:selectItem itemValue="s" itemLabel="Sim" /><br/><br/>
+                    <f:selectItem itemValue="n" itemLabel="Não" />
+                </p:selectOneRadio>
+                <p:outputLabel value="Dependentes menores que 14 anos:" for="itDep14" />
+                <p:inputText id="itDep14" requiredMessage="Este campo deve ser preenchido" value="#{telaSalariosBean.funcionario.dep14}" /><br/><br/>
+                <p:outputLabel value="Dependentes de imposto de renda:" for="itDepir" />
+                <p:inputText id="itDepir" requiredMessage="Este campo deve ser preenchido" value="#{telaSalariosBean.funcionario.depir}" /><br/><br/>
+                <p:outputLabel value="Salario:" for="itSalario" />
+                <p:inputText id="itSalario" requiredMessage="Este campo deve ser preenchido" value="#{telaSalariosBean.funcionario.salario}" /><br/><br/>
+                <p:commandButton id="bSalva" icon="ui-icon-disk" ajax="false" action="#{telaSalariosBean.salvafunc()}"/>
+                <p:tooltip id="ttSalva" for="bSalva" value="Salvar" trackMouse="true"/>
+                <p:commandButton id="bVolta" icon="ui-icon-arrow-1-ne" ajax="false" action="index"/>
+                <p:tooltip id="ttVolta" for="bVolta" value="Tela inicial" trackMouse="true"/>
+            </h:form>
+        </p:fieldset>
+    </h:body>
+</html> 
